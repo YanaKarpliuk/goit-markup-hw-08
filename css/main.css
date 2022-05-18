@@ -793,11 +793,18 @@ img {
   margin-bottom: 30px;
 }
 
+.about-item:last-child {
+  margin-bottom: 0;
+}
+
 @media screen and (min-width: 768px) {
   .about-item {
     width: calc(100% / 2 - 30px);
     margin-left: 30px;
     display: block;
+  }
+  .about-item:nth-last-child(1), .about-item:nth-last-child(2) {
+    margin-bottom: 0;
   }
 }
 
@@ -906,15 +913,23 @@ img {
   margin-bottom: 30px;
 }
 
+.company-item:nth-last-child(1), .company-item:nth-last-child(2) {
+  margin-bottom: 0;
+}
+
 @media screen and (min-width: 768px) {
   .company-item {
     width: calc(100% / 3 - 30px);
+  }
+  .company-item:nth-last-child(1), .company-item:nth-last-child(2), .company-item:nth-last-child(3) {
+    margin-bottom: 0;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .company-item {
     width: calc(100% / 6 - 30px);
+    margin-bottom: 0;
   }
 }
 
@@ -1292,8 +1307,15 @@ img {
 .portfolio {
   display: flex;
   flex-direction: column;
-  padding-top: 95px;
-  padding-bottom: 95px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    padding-top: 95px;
+    padding-bottom: 95px;
+  }
 }
 
 .portfolio-btn-list {
@@ -1377,6 +1399,10 @@ img {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+.portfolio-img-item:last-child {
+  margin-bottom: 0;
+}
+
 @media screen and (min-width: 768px) {
   .portfolio-img-item {
     width: calc(100% / 2 - 30px);
@@ -1386,7 +1412,17 @@ img {
 
 @media screen and (min-width: 1200px) {
   .portfolio-img-item {
+    min-width: 370px;
     width: calc(100% / 3 - 30px);
+  }
+  .portfolio-img-item:nth-child(3n - 2) {
+    margin-left: 0;
+  }
+  .portfolio-img-item:nth-child(3n) {
+    margin-right: 0;
+  }
+  .portfolio-img-item:nth-last-child(1), .portfolio-img-item:nth-last-child(2), .portfolio-img-item:nth-last-child(3) {
+    margin-bottom: 0;
   }
 }
 
@@ -1468,16 +1504,24 @@ img {
   margin-bottom: 30px;
 }
 
+.team-item:last-child {
+  margin-bottom: 0;
+}
+
 @media screen and (min-width: 768px) {
   .team-item {
     width: calc(100% / 2 - 30px);
     margin-left: 30px;
+  }
+  .team-item:nth-last-child(1), .team-item:nth-last-child(2) {
+    margin-bottom: 0;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .team-item {
     width: calc(100% / 4 - 30px);
+    margin-bottom: 0;
   }
 }
 
